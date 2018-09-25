@@ -14,5 +14,6 @@ We used two APIs:
 1- Weather forecasting
 
 2- Movie Api
+
 https://openweathermap.org/api
 https://www.themoviedb.org/documentation/api
