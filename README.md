@@ -15,7 +15,7 @@ http://localhost:8080/swagger-ui.html
 ## I used two APIs:
 
 * 1 - Weather forecasting<br/>
-`https://openweathermap.org/api` (Open Wheather Api) </br>
+`https://openweathermap.org/api` (Open Weather Api) </br>
 * 2 - Movie Api<br/>
 `https://www.themoviedb.org/documentation/api` (Movie Api)
 
