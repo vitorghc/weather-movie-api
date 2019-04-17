@@ -1,4 +1,4 @@
-# WeatherMovieApi
+# weather-movie-api
 
 
 ## About the project:
