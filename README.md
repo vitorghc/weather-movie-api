@@ -29,7 +29,7 @@ http://localhost:8080/swagger-ui.html
 
 
 
-## I used two APIs:
+## Documentatons of the two API used:
 
 * 1 - Weather forecasting<br/>
 `https://openweathermap.org/api` (Open Weather Api) </br>
