@@ -12,16 +12,16 @@
 * Apache-maven 3.5.4 
 
 ## Get Started
-Clone project `https://github.com/vitorghc/weatherMovieApi.git` and start project in server.port desired.
+Clone project `https://github.com/vitorghc/weather-movie-api.git` and start project in server.port desired.
 
 When starting the project, by default the port will be 8091 in which case you can initialize using the url:
 ```
-http://localhost:8091/weatherMovie/movies
+http://localhost:8091/weather-movies/v1/movies
 ```
 
 You can also use a swagger facilitator as a great way to use this API.
 ```
-http://localhost:8091/swagger-ui.html
+http://localhost:8091/weather-movies/v1/swagger-ui.html
 ```
 
 ## Log Result
