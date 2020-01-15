@@ -1,10 +1,13 @@
 package com.example.api.service.client;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.example.api.json.WeatherResponse;
+
+@Service
 public class WeatherClient {
 	
 	@Value("${openweathermap.api.url}")
@@ -30,17 +33,11 @@ public class WeatherClient {
 	 */
 	public int callWeather() throws JSONException {
 
-		String weather = restTemplate.getForObject(weatherUrl, String.class,
+		WeatherResponse weather = restTemplate.getForObject(weatherUrl, WeatherResponse.class,
 				location, key);
+		Integer temperature = Double.valueOf(weather.getWeather().getTemperature()).intValue() - 271;
 
-		JSONObject json = new JSONObject(weather);
-		String jsonTemp = json.getJSONObject("main").getString("temp");
-
-		double doubleValue = Double.parseDouble(jsonTemp);
-		int jsonTempInt = (int) doubleValue;
-		jsonTempInt = (jsonTempInt - 271);
-
-		return jsonTempInt;
+		return temperature;
 	}
 
 }
