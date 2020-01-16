@@ -1,6 +1,5 @@
 package com.example.api.service;
 
-import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +24,7 @@ public class WeatherMovieService {
 	 * 
 	 * @param Integer
 	 *            weather
-	 * @return String
+	 * @return MovieResponse
 	 */
 	public MovieResponse getGenreMovies(Integer weather) {
 		MovieResponse movies = null;
@@ -54,9 +53,9 @@ public class WeatherMovieService {
 	 * Method for mount movies
 	 * 
 	 * @param
-	 * @return String
+	 * @return MovieResponse
 	 */
-	public MovieResponse mountMovieByGenre() throws JSONException {
+	public MovieResponse mountMovieByGenre() {
 		return getGenreMovies(weatherClient.callWeather());
 	}
 

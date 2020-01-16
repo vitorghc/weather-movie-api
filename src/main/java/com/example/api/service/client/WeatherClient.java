@@ -1,6 +1,5 @@
 package com.example.api.service.client;
 
-import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -31,7 +30,7 @@ public class WeatherClient {
 	 * @return int
 	 * 
 	 */
-	public int callWeather() throws JSONException {
+	public Integer callWeather() {
 
 		WeatherResponse weather = restTemplate.getForObject(weatherUrl, WeatherResponse.class,
 				location, key);
