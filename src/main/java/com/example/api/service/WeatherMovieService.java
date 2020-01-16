@@ -27,7 +27,7 @@ public class WeatherMovieService {
 	 *            weather
 	 * @return String
 	 */
-	public MovieResponse callMovies(Integer weather) {
+	public MovieResponse getGenreMovies(Integer weather) {
 		MovieResponse movies = null;
 
 		if (weather == 40) {
@@ -57,9 +57,7 @@ public class WeatherMovieService {
 	 * @return String
 	 */
 	public MovieResponse mountMovieByGenre() throws JSONException {
-		Integer weather = weatherClient.callWeather();
-		MovieResponse movies = callMovies(weather);
-		return movies;
+		return getGenreMovies(weatherClient.callWeather());
 	}
 
 }
