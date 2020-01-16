@@ -1,6 +1,5 @@
 package com.example.api.controller;
 
-import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +20,7 @@ public class WeatherMovieController {
 
 	@GetMapping
 	@ApiOperation(value = "Find Movies by weather temperature", response = MovieResponse.class, responseContainer = "List")
-	public ResponseEntity<MovieResponse> getMovies() throws JSONException, NullPointerException {
+	public ResponseEntity<MovieResponse> getMovies() {
 		return ResponseEntity.ok().body(weatherMovieService.mountMovieByGenre());
 	}
 
