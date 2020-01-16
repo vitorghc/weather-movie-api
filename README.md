@@ -35,6 +35,3 @@ http://localhost:8091/weather-movies/v1/swagger-ui.html
 `https://openweathermap.org/api` (Open Weather Api) </br>
 * 2 - Movie Api<br/>
 `https://www.themoviedb.org/documentation/api` (Movie Api)
-
-
-
